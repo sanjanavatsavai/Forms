@@ -24,25 +24,31 @@ function Form() {
         e.preventDefault()
         console.log(values)
     }
+
+    const ResetFunc = () => {
+
+        setValues({firstname: '', lastname: '', email: '', contact: ''})
+
+    }
   return (
     <div className="container">
         <h1>Form</h1>
         <form onSubmit={handleSubmit}>
             <label htmlFor='firstname'>First Name*</label>
             <input type="text" placeholder='Enter First Name' name='firstname' 
-            onChange={(e) => handleChanges(e)} required/>
+            onChange={(e) => handleChanges(e)} required value = {values.firstname}/>
 
               <label htmlFor='lastname'>Last Name*</label>
             <input type="text" placeholder='Enter Last Name' name='lastname' 
-            onChange={(e) => handleChanges(e)} required/>
+            onChange={(e) => handleChanges(e)} required value = {values.lastname}/>
 
              <label htmlFor='email'>Email*</label>
             <input type="email" placeholder='Enter Email' name='email' 
-            onChange={(e) => handleChanges(e)} required/>
+            onChange={(e) => handleChanges(e)} required value = {values.email}/>
 
              <label htmlFor='contact'>Contact*</label>
             <input type="text" placeholder='Enter Phone Number' name='contact' 
-            onChange={(e) => handleChanges(e)}/>
+            onChange={(e) => handleChanges(e)} value = {values.contact}/>
 
             <label htmlFor='gender'>Gender</label>
             <input type="radio" name='gender' 
@@ -72,7 +78,7 @@ function Form() {
             onChange={(e) => handleChanges(e)}
             placeholder='Tell us a little bit about yourself'></textarea>
 
-            <button type ='button'>Reset</button>
+            <button type ='button' onClick={ResetFunc}>Reset</button>
             <button type='submit'>Submit</button>
 
 
