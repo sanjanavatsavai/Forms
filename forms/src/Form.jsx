@@ -1,4 +1,5 @@
 import React from 'react'
+import './Form.jsx';
 
 function Form() {
   return (
@@ -18,8 +19,8 @@ function Form() {
             <input type="text" placeholder='Enter Phone Number' name='contact' />
 
             <label htmlFor='gender'>Gender</label>
-            <input type='radio' name='gender' /> Male
-            <input type='radio' name='gender' /> Female
+            <input type="radio" name='gender' /> Male
+            <input type="radio" name='gender' /> Female
 
             <label htmlFor='subject'>Major</label>
             <select name='subject' id='subject'>
